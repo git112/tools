@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { 
   Code, 
-  FileText, 
-  Globe
+  FileText
 } from 'lucide-react';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
@@ -17,7 +16,8 @@ const ToolsPage = () => {
       description: "Advanced job search and career management platform",
       icon: Code,
       color: "from-orange-500 to-red-500",
-      category: "Career"
+      category: "Career",
+      url: "/jobnest"
     },
     {
       id: 2,
@@ -25,15 +25,8 @@ const ToolsPage = () => {
       description: "AI-powered resume optimization and enhancement",
       icon: FileText,
       color: "from-purple-500 to-violet-600",
-      category: "Productivity"
-    },
-    {
-      id: 3,
-      title: "VerseCity",
-      description: "Versatile tool for various professional tasks",
-      icon: Globe,
-      color: "from-blue-500 to-indigo-600",
-      category: "Utility"
+      category: "Productivity",
+      url: "/resume-refiner-ai"
     }
   ];
 
@@ -124,9 +117,14 @@ const ToolsPage = () => {
                       <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                       <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
                     </div>
-                    <button className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors duration-200">
+                    <a 
+                      href={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors duration-200"
+                    >
                       Launch →
-                    </button>
+                    </a>
                   </div>
                 </div>
 
