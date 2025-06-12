@@ -117,14 +117,12 @@ const ToolsPage = () => {
                       <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
                       <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
                     </div>
-                    <a 
-                      href={tool.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button 
+                      onClick={() => window.location.href = tool.url}
                       className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors duration-200"
                     >
                       Launch →
-                    </a>
+                    </button>
                   </div>
                 </div>
 
