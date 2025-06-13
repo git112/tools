@@ -2,7 +2,11 @@
   "rewrites": [
     {
       "source": "/jobnest/:path*",
-      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/jobnest/:path*"
+      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/:path*"
+    },
+    {
+      "source": "/jobnest",
+      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/"
     },
     {
       "source": "/resume-refiner-ai/:path*",
