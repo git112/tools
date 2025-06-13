@@ -5,6 +5,10 @@
       "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/:path*"
     },
     {
+      "source": "/auth",
+      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/auth"
+    },
+    {
       "source": "/resume-refiner-ai/:path*",
       "destination": "https://resume-refiner-ai-eight.vercel.app/:path*"
     },
