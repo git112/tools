@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/jobnest/auth",
+      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/auth"
+    },
+    {
+      "source": "/jobnest/auth/:path*",
+      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/auth/:path*"
+    },
+    {
       "source": "/jobnest/assets/:path*",
       "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/assets/:path*"
     },
@@ -11,6 +19,14 @@
     {
       "source": "/jobnest",
       "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/"
+    },
+    {
+      "source": "/resume-refiner-ai/auth",
+      "destination": "https://resume-refiner-ai-eight.vercel.app/auth"
+    },
+    {
+      "source": "/resume-refiner-ai/auth/:path*",
+      "destination": "https://resume-refiner-ai-eight.vercel.app/auth/:path*"
     },
     {
       "source": "/resume-refiner-ai/assets/:path*",
