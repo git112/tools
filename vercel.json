@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/jobnest/auth",
-      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/auth"
+      "source": "/jobnest/api/:path*",
+      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/api/:path*"
+    },
+    {
+      "source": "/jobnest/auth/callback",
+      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/auth/callback"
     },
     {
       "source": "/jobnest/auth/:path*",
@@ -21,8 +25,12 @@
       "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/"
     },
     {
-      "source": "/resume-refiner-ai/auth",
-      "destination": "https://resume-refiner-ai-eight.vercel.app/auth"
+      "source": "/resume-refiner-ai/api/:path*",
+      "destination": "https://resume-refiner-ai-eight.vercel.app/api/:path*"
+    },
+    {
+      "source": "/resume-refiner-ai/auth/callback",
+      "destination": "https://resume-refiner-ai-eight.vercel.app/auth/callback"
     },
     {
       "source": "/resume-refiner-ai/auth/:path*",
@@ -55,9 +63,22 @@
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization"
         }
       ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/jobnest/assets/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "continue": true
+    },
+    {
+      "src": "/jobnest/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
