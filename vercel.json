@@ -5,7 +5,11 @@
       "destination": "https://gururo-ai-powered-career-guidance.onrender.com/api/:path*"
     },
     {
-      "source": "/jobnest/(.*)",
+      "source": "/jobnest/auth",
+      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/auth"
+    },
+    {
+      "source": "/jobnest/:path*",
       "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/:path*"
     },
     {
@@ -18,11 +22,22 @@
     },
     {
       "source": "/resume-refiner-ai/(.*)",
-      "destination": "https://resume-refiner-ai-eight.vercel.app/:path*"
+      "destination": "https://resume-refiner-ai-eight.vercel.app/$1"
     },
     {
       "source": "/resume-refiner-ai",
       "destination": "https://resume-refiner-ai-eight.vercel.app/"
+    },
+    {
+      "source": "/jobnest/assets/(.*)",
+      "destination": "https://ai-powered-career-guidance-platform-nine.vercel.app/assets/$1",
+      "has": [
+        {
+          "type": "header",
+          "key": "cache-control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ],
   "headers": [
@@ -62,15 +77,6 @@
           "value": "require-corp"
         }
       ]
-    }
-  ],
-  "routes": [
-    {
-      "src": "/jobnest/assets/(.*)",
-      "headers": {
-        "cache-control": "public, max-age=31536000, immutable"
-      },
-      "continue": true
     }
   ],
   "trailingSlash": false,

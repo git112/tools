@@ -26,7 +26,7 @@ const ToolsPage = () => {
       icon: FileText,
       color: "from-purple-500 to-violet-600",
       category: "Productivity",
-      url: "/resume-refiner-ai"
+      url: "/resume-refiner"
     }
   ];
 
